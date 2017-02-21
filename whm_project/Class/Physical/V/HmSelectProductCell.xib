@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HmSelectProductCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_head" translatesAutoresizingMaskIntoConstraints="NO" id="96o-xi-Axg">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="5Ey-HH-u7t"/>
+                            <constraint firstAttribute="height" constant="20" id="BEb-sJ-H8J"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="泰康健康百分百A款重大疾病保险" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGI-9l-P2l">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_unselected" translatesAutoresizingMaskIntoConstraints="NO" id="qvf-hC-WXD">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="11" id="bte-CK-ojh"/>
+                            <constraint firstAttribute="height" constant="8" id="yke-Ph-Alz"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qvf-hC-WXD" firstAttribute="leading" secondItem="ZGI-9l-P2l" secondAttribute="trailing" constant="5" id="0hE-Am-mHY"/>
+                    <constraint firstItem="qvf-hC-WXD" firstAttribute="centerY" secondItem="96o-xi-Axg" secondAttribute="centerY" id="5fn-TT-cET"/>
+                    <constraint firstItem="ZGI-9l-P2l" firstAttribute="centerY" secondItem="96o-xi-Axg" secondAttribute="centerY" id="CLM-JP-rHa"/>
+                    <constraint firstItem="96o-xi-Axg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ob2-8Z-hES"/>
+                    <constraint firstItem="ZGI-9l-P2l" firstAttribute="leading" secondItem="96o-xi-Axg" secondAttribute="trailing" constant="5" id="c2M-Rk-15u"/>
+                    <constraint firstAttribute="trailing" secondItem="qvf-hC-WXD" secondAttribute="trailing" constant="10" id="kja-1I-ba1"/>
+                    <constraint firstItem="96o-xi-Axg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="yVd-2s-omh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgHead" destination="96o-xi-Axg" id="hvc-IG-RYY"/>
+                <outlet property="imgSelect" destination="qvf-hC-WXD" id="v19-0e-WGG"/>
+                <outlet property="lblName" destination="ZGI-9l-P2l" id="4x4-rz-bM9"/>
+            </connections>
+            <point key="canvasLocation" x="-225" y="37"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="product_unselected" width="44" height="32"/>
+        <image name="test_head" width="200" height="200"/>
+    </resources>
+</document>
